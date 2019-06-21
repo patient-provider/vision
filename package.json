@@ -2,6 +2,9 @@
   "name": "vision",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "10.16.0"
+  },
   "dependencies": {},
   "devDependencies": {
     "jake": "^8.1.1"
