@@ -72,3 +72,4 @@ fabric.properties
 
 # npm
 node_modules/**/.bin/
+node_modules/fsevents/lib/
