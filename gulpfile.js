@@ -1,22 +1,22 @@
-(function () {
-    "use strict";
+(function() {
+  "use strict";
 
-    const {series} = require('gulp');
-    const semver = require("semver");
+  var series = require("gulp").series;
+  var semver = require("semver");
 
-    function build(done) {
-        console.log("\n\nBUILD OK");
-        done();
-    }
+  function build(done) {
+    console.log("\n\nBUILD OK");
+    done();
+  }
 
-    function version(done) {
-        console.log("Checking Node version: .");
-        const packageJson = require("./package.json");
-        const expectedVersion = packageJson.engines.node;
-        const actualVersion = process.version;
-        done(semver.neq(expectedVersion, actualVersion));
-    }
+  function version(done) {
+    console.log("Checking Node version: .");
 
-    exports.default = series(version, build);
+    var packageJson = require("./package.json");
+    var expectedVersion = packageJson.engines.node;
+    var actualVersion = process.version;
+    done(semver.neq(expectedVersion, actualVersion));
+  }
 
-}());
+  exports.default = series(version, build);
+})();
