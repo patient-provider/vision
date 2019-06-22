@@ -6,6 +6,7 @@
     "node": "10.16.0"
   },
   "devDependencies": {
+    "eslint": "^6.0.0",
     "gulp": "^4.0.2",
     "semver": "^6.1.1"
   }
