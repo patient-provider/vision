@@ -1,0 +1,12 @@
+{
+  "name": "vision",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "10.16.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "semver": "^6.1.1"
+  }
+}
