@@ -5,4 +5,4 @@ if not exist node\.bin\gulp (
     call npm rebuild
 )
 
-node_modules\.bin\gulp %*
+npm run %*

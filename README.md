@@ -9,5 +9,7 @@ To contribute to project:
 To build project:
 
 All commands must run from root of repository: `cd vision`
-- Mac/Unix: `./gulp.sh`
-- Windows: `gulp`
+- Mac/Unix: `./auto.sh build`
+- Windows: `auto build`
+
+NOTE: These scripts rebuild node modules, if necessary, and pass parameter (ie `build` to `npm run`). To see available tasks run script without parameter.
