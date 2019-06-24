@@ -6,7 +6,16 @@
     "node": "10.16.0"
   },
   "devDependencies": {
+    "eslint": "^6.0.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "gulp": "^4.0.2",
-    "semver": "^6.1.1"
+    "prettier": "^1.18.2",
+    "semver": "^6.1.2"
+  },
+  "scripts": {
+    "node-version": "node ./build_scripts/node-version.js",
+    "lint": "eslint --fix ./build_scripts/node-version.js",
+    "build": "npm run node-version && npm run lint && echo '\n\nBuild OK.'"
   }
 }
