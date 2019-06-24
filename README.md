@@ -9,5 +9,5 @@ To contribute to project:
 To build project:
 
 All commands must run from root of repository: `cd vision`
-- Mac/Unix: `./gulp.sh`
-- Windows: `gulp`
+- Mac/Unix: `./auto.sh`
+- Windows: `auto`
