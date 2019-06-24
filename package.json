@@ -13,6 +13,7 @@
     "semver": "^6.1.2"
   },
   "scripts": {
-    "node-version": "node ./build_scripts/node-version.js"
+    "node-version": "node ./build_scripts/node-version.js",
+    "lint": "eslint --fix ./build_scripts/node-version.js"
   }
 }
