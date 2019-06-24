@@ -4,5 +4,8 @@
   "private": true,
   "engines": {
     "node": "10.16.0"
+  },
+  "devDependencies": {
+    "semver": "^6.1.2"
   }
 }
