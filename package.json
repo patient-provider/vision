@@ -17,7 +17,7 @@
   },
   "scripts": {
     "node-version": "node ./build_scripts/node-version.js",
-    "lint": "eslint --fix ./build_scripts/node-version.js",
+    "lint": "eslint --fix ./**/*.js",
     "local": "http-server src",
     "build": "npm run node-version && npm run lint && echo '\n\nBuild OK.'"
   }
