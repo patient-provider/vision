@@ -6,6 +6,7 @@
     "node": "10.16.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^6.0.0",
     "eslint-config-prettier": "^5.0.0",
     "eslint-plugin-prettier": "^3.1.0",
@@ -16,7 +17,7 @@
   },
   "scripts": {
     "node-version": "node ./build_scripts/node-version.js",
-    "lint": "eslint --fix ./build_scripts/node-version.js",
+    "lint": "eslint --fix ./**/*.js",
     "local": "http-server src",
     "build": "npm run node-version && npm run lint && echo '\n\nBuild OK.'"
   }
