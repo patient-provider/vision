@@ -37,5 +37,9 @@
     "test:browser": "karma run",
     "test": "npm run test:node && npm run test:browser",
     "build": "npm run node-version && npm run lint && npm run test && echo '\n\nBuild OK.'"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
