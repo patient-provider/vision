@@ -20,7 +20,7 @@
     "local": "http-server src",
     "node-version": "node ./build_scripts/node-version.js",
     "lint": "eslint --fix ./**/*.js",
-    "test": "mocha ./src/test.js",
+    "test": "mocha ./tst/**/*.js",
     "build": "npm run node-version && npm run lint && npm run test && echo '\n\nBuild OK.'"
   }
 }
