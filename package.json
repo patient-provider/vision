@@ -17,9 +17,10 @@
     "semver": "^6.1.2"
   },
   "scripts": {
+    "local": "http-server src",
     "node-version": "node ./build_scripts/node-version.js",
     "lint": "eslint --fix ./**/*.js",
-    "local": "http-server src",
-    "build": "npm run node-version && npm run lint && echo '\n\nBuild OK.'"
+    "test": "mocha ./src/test.js",
+    "build": "npm run node-version && npm run lint && npm run test && echo '\n\nBuild OK.'"
   }
 }
