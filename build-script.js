@@ -11,6 +11,8 @@
   };
 
   exports.clean = (directory) => {
+    const shell = require("shelljs");
     console.log("Deleting '" + directory + "/': .");
+    shell.rm('-rf', directory);
   };
 })();

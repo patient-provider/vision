@@ -35,14 +35,14 @@
   "scripts": {
     "local": "http-server dist",
     "karma": "karma start",
-    "node-version": "node -e \"require('./build-script.js').version()\"",
+    "version": "node -e \"require('./build-script.js').version()\"",
     "clean": "node -e \"require('./build-script.js').clean('dist')\"",
     "lint": "eslint --format table --fix ./ src/",
     "webpack": "webpack --mode=production",
     "test:node": "mocha ./src/*.js",
     "test:browser": "karma run",
     "test": "npm run test:node && npm run test:browser",
-    "build": "npm run node-version && npm run lint && npm run test && echo '\n\nBuild OK.'"
+    "build": "npm run version && npm run lint && npm run test && echo '\n\nBuild OK.'"
   },
   "dependencies": {
     "react": "^16.8.6",
