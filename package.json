@@ -31,8 +31,8 @@
   "scripts": {
     "local": "http-server src",
     "karma": "karma start",
-    "node-version": "node ./build_scripts/node-version.js",
-    "lint": "eslint --fix ./*.js ./build_scripts/*.js ./src/js/*.js ./tst/*.js",
+    "node-version": "node build_scripts/node-version.js",
+    "lint": "eslint --format table --fix ./ build_scripts/ src/ tst/",
     "test:node": "mocha ./tst/**/*.js",
     "test:browser": "karma run",
     "test": "npm run test:node && npm run test:browser",
