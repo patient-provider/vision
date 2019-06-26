@@ -32,10 +32,11 @@
     "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
-    "local": "http-server src",
+    "local": "http-server dist",
     "karma": "karma start",
     "node-version": "node build_scripts/node-version.js",
     "lint": "eslint --format table --fix ./ build_scripts/ src/ tst/",
+    "webpack": "webpack",
     "test:node": "mocha ./tst/**/*.js",
     "test:browser": "karma run",
     "test": "npm run test:node && npm run test:browser",
