@@ -35,15 +35,18 @@
     "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
+    "run": "npm run webpack && npm run local",
+    "webpack": "webpack --mode=production --config webpack.config.js",
     "local": "http-server dist",
-    "karma": "karma start",
+
+    "build": "npm run version && npm run lint && npm run test && echo '\n\nBuild OK.'",
     "version": "node -e \"require('./build-script.js').version()\"",
     "lint": "eslint --format table --fix ./ src/",
-    "webpack": "webpack --mode=development --config webpack.config.js",
+    "test": "npm run test:node && npm run test:browser",
     "test:node": "mocha ./src/*.js",
     "test:browser": "karma run",
-    "test": "npm run test:node && npm run test:browser",
-    "build": "npm run version && npm run lint && npm run test && echo '\n\nBuild OK.'"
+
+    "karma": "karma start"
   },
   "dependencies": {
     "react": "^16.8.6",
