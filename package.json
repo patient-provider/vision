@@ -35,6 +35,7 @@
     "local": "http-server dist",
     "karma": "karma start",
     "node-version": "node -e \"require('./build-script.js').version()\"",
+    "clean": "node -e \"require('./build-script.js').clean('dist')\"",
     "lint": "eslint --format table --fix ./ src/",
     "webpack": "webpack --mode=production",
     "test:node": "mocha ./src/*.js",
