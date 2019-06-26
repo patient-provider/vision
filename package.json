@@ -34,8 +34,8 @@
   "scripts": {
     "local": "http-server dist",
     "karma": "karma start",
-    "node-version": "node build_scripts/node-version.js",
-    "lint": "eslint --format table --fix ./ build_scripts/ src/",
+    "node-version": "node -e \"require('./build-script.js').version()\"",
+    "lint": "eslint --format table --fix ./ src/",
     "webpack": "webpack --mode=production",
     "test:node": "mocha ./src/*.js",
     "test:browser": "karma run",
