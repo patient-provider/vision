@@ -35,9 +35,9 @@
     "local": "http-server dist",
     "karma": "karma start",
     "node-version": "node build_scripts/node-version.js",
-    "lint": "eslint --format table --fix ./ build_scripts/ src/ tst/",
+    "lint": "eslint --format table --fix ./ build_scripts/ src/",
     "webpack": "webpack --mode=production",
-    "test:node": "mocha ./tst/**/*.js",
+    "test:node": "mocha ./src/*.js",
     "test:browser": "karma run",
     "test": "npm run test:node && npm run test:browser",
     "build": "npm run node-version && npm run lint && npm run test && echo '\n\nBuild OK.'"
