@@ -10,9 +10,9 @@
     semver.neq(expectedVersion, actualVersion);
   };
 
-  exports.clean = (directory) => {
+  exports.clean = directory => {
     const shell = require("shelljs");
     console.log("Deleting '" + directory + "/': .");
-    shell.rm('-rf', directory);
+    shell.rm("-rf", directory);
   };
 })();
