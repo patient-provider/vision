@@ -2,7 +2,7 @@
   "use strict";
 
   const addition = require("../src/addition.js");
-  const assert = require("./assert.js");
+  const assert = require("chai").assert;
 
   describe("Addition", function() {
     it("adds positive numbers", function() {
