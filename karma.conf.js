@@ -14,7 +14,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     // files: ["./src/*.js", "./src/js/*.js", "./tst/*.js"],
-    files: ["./src/*.js", "./src/third-party/*.js"],
+    files: ["src/*.js", "third-party/*.js"],
 
     // list of files / patterns to exclude
     exclude: [],
@@ -25,8 +25,8 @@ module.exports = function(config) {
       // "App.css": ["webpack", "sourcemap"],
       // "App.js": ["webpack", "sourcemap"],
       // "index.js": ["webpack", "sourcemap"],
-      "./src/*.js": ["commonjs"],
-      "./src/third-party/*.js": ["commonjs"]
+      "src/*.js": ["commonjs"],
+      "third-party/*.js": ["commonjs"]
     },
 
     webpack: {
