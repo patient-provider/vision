@@ -42,7 +42,7 @@
     "version": "node -e \"require('./build-script.js').version()\"",
     "lint": "eslint --format table --fix ./ src/",
     "test": "npm run test:node && npm run test:browser",
-    "test:node": "mocha ./src/*.js",
+    "test:node": "mocha ./tst/*test.js",
     "test:browser": "karma run",
     "karma": "karma start"
   },
