@@ -1,9 +1,6 @@
 // Karma configuration
 // Generated on Tue Jun 25 2019 09:36:37 GMT-0400 (Eastern Daylight Time)
-
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const webpackConfig = require("./webpack.config.js");
 
 module.exports = function(config) {
   config.set({
@@ -26,32 +23,7 @@ module.exports = function(config) {
       "tst/*_test.js": ["webpack"]
     },
 
-    webpack: {
-      entry: { index: "./src/index.js", main: "./src/main.js" },
-
-      output: {
-        filename: "[name]-[hash].bundle.js",
-        path: path.resolve(__dirname, "dist")
-      },
-
-      module: {
-        rules: [
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: "babel-loader"
-          }
-        ]
-      },
-
-      plugins: [
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-          title: "Webpack Generated File",
-          template: "src/index.html"
-        })
-      ]
-    },
+    webpack: webpackConfig,
 
     // test results reporter to use
     // possible values: 'dots', 'progress'

@@ -36,7 +36,7 @@
   },
   "scripts": {
     "run": "npm run webpack && npm run local",
-    "webpack": "webpack --mode=production --config webpack.config.js",
+    "webpack": "webpack --config webpack.config.js",
     "local": "http-server dist",
     "build": "npm run version && npm run lint && npm run test && echo '\n\nBuild OK.'",
     "version": "node -e \"require('./build-script.js').version()\"",
