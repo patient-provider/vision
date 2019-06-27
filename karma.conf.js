@@ -14,10 +14,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     // files: ["./src/*.js", "./src/js/*.js", "./tst/*.js"],
-    files: ["./src/*.js"],
+    files: ["./src/*.js", "./src/third-party/*.js"],
 
     // list of files / patterns to exclude
-    exclude: ["./build_scripts/**/*.js"],
+    exclude: [],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -25,9 +25,8 @@ module.exports = function(config) {
       // "App.css": ["webpack", "sourcemap"],
       // "App.js": ["webpack", "sourcemap"],
       // "index.js": ["webpack", "sourcemap"],
-      // "index.html": ["webpack", "sourcemap"],
-      "./src/*.js": ["commonjs"]
-      // "./tst/test.js": ["commonjs"]
+      "./src/*.js": ["commonjs"],
+      "./src/third-party/*.js": ["commonjs"]
     },
 
     webpack: {

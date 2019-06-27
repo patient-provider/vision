@@ -2,15 +2,11 @@
   "use strict";
 
   const addition = require("./addition.js");
+  const assert = require("./assert.js");
 
   describe("Addition", function() {
     it("adds positive numbers", function() {
-      assertEqual(addition.add(3, 4), 7);
+      assert(addition.add(3, 4), 7);
     });
-
-    function assertEqual(actual, expected) {
-      if (actual !== expected)
-        throw new Error("expected " + expected + ", but was " + actual);
-    }
   });
 })();
