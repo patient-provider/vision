@@ -1,7 +1,9 @@
 // Karma configuration
 // Generated on Tue Jun 25 2019 09:36:37 GMT-0400 (Eastern Daylight Time)
 
-const webpack = require("webpack");
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = function(config) {
   config.set({
@@ -10,11 +12,10 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ["mocha", "commonjs"],
+    frameworks: ["mocha"],
 
     // list of files / patterns to load in the browser
-    // files: ["./src/*.js", "./src/js/*.js", "./tst/*.js"],
-    files: ["src/*.js", "third-party/*.js", "tst/*.js"],
+    files: ["tst/*_test.js"],
 
     // list of files / patterns to exclude
     exclude: [],
@@ -22,34 +23,34 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      // "Greeter.js": ["webpack", "sourcemap"],
-      // "main.js": ["webpack", "sourcemap"],
-      "src/*.js": ["commonjs"],
-      "third-party/*.js": ["commonjs"],
-      "tst/*.js": ["commonjs"]
+      "tst/*_test.js": ["webpack"]
     },
 
     webpack: {
-      entry: "./src/index.js",
-      devtool: "inline-source-map",
-      mode: "development",
+      entry: { index: "./src/index.js", main: "./src/main.js" },
+
+      output: {
+        filename: "[name]-[hash].bundle.js",
+        path: path.resolve(__dirname, "dist")
+      },
+
       module: {
         rules: [
           {
-            test: /\.(js|jsx)$/,
-            exclude: /(node_modules|bower_components)/,
-            loader: "babel-loader",
-            options: { presets: ["@babel/env"] }
-          },
-          {
-            test: /\.css$/,
-            use: ["style-loader", "css-loader"]
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: "babel-loader"
           }
         ]
-      }
-    },
-    webpackServer: {
-      noInfo: true
+      },
+
+      plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+          title: "Webpack Generated File",
+          template: "src/index.html"
+        })
+      ]
     },
 
     // test results reporter to use
