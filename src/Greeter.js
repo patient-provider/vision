@@ -4,7 +4,7 @@ class Greeter extends Component {
   render() {
     return (
       <div>
-        <h1> "Hi there and greetings"</h1>
+        <h1>Vision Project</h1>
       </div>
     );
   }

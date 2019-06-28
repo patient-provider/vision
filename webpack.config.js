@@ -22,7 +22,6 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack Generated File",
       template: "src/index.html"
     })
   ]
