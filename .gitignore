@@ -76,4 +76,4 @@ node_modules/fsevents/lib/
 node_modules/.cache/
 
 # React
-dist/
+dist/*

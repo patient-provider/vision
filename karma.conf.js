@@ -1,6 +1,5 @@
 // Karma configuration
 // Generated on Tue Jun 25 2019 09:36:37 GMT-0400 (Eastern Daylight Time)
-const webpackConfig = require("./webpack.config.js");
 
 module.exports = function(config) {
   config.set({
@@ -23,7 +22,9 @@ module.exports = function(config) {
       "tst/*_test.js": ["webpack"]
     },
 
-    webpack: webpackConfig,
+    webpack: {
+      mode: "development"
+    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'

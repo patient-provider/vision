@@ -1,6 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   devtool: "source-map",
@@ -23,7 +22,6 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Webpack Generated File",
       template: "src/index.html"
