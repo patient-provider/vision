@@ -27,12 +27,14 @@
     "mocha": "^6.1.4",
     "prettier": "^1.18.2",
     "semver": "^6.1.2",
+    "shelljs": "^0.8.3",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.0",
     "webpack-cli": "^3.3.5"
   },
   "scripts": {
-    "run": "npm run webpack && npm run local",
+    "run": "npm run clean && npm run webpack && npm run local",
+    "clean": "node -e \"require('./build-script.js').clean()\"",
     "webpack": "webpack --config webpack.config.js",
     "local": "http-server dist",
     "build": "npm run version && npm run lint && npm run test && echo '\n\nBuild OK.'",
