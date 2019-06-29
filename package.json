@@ -30,7 +30,8 @@
     "shelljs": "^0.8.3",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.0",
-    "webpack-cli": "^3.3.5"
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
     "run": "npm run clean && npm run webpack && npm run local",
@@ -43,7 +44,8 @@
     "test": "npm run test:node && npm run test:browser",
     "test:node": "mocha ./tst/*test.js",
     "test:browser": "karma run",
-    "karma": "karma start"
+    "karma": "karma start",
+    "webpack:dev": "webpack-dev-server --mode development --open --hot"
   },
   "dependencies": {
     "react": "^16.8.6",
