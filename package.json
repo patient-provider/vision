@@ -45,7 +45,7 @@
     "test:node": "mocha ./tst/*test.js",
     "test:browser": "karma run",
     "karma": "karma start",
-    "webpack:dev": "webpack-dev-server"
+    "webpack:dev": "webpack-dev-server --mode development --open --hot"
   },
   "dependencies": {
     "react": "^16.8.6",
