@@ -1,1 +1,8 @@
-
+version: 2
+jobs:
+  one:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "patient-provider test"
