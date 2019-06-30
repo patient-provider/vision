@@ -39,14 +39,15 @@
     "clean": "node -e \"require('./build-script.js').clean()\"",
     "webpack": "webpack --config webpack.config.js",
     "local": "http-server dist",
-    "build": "npm run version && npm run lint && npm run test && echo '\n\nBuild OK.'",
+    "build": "npm run version && npm run lint:prod && npm run test && echo '\n\nBuild OK.'",
     "version": "node -e \"require('./build-script.js').version()\"",
-    "lint": "eslint --format table --fix ./ src/",
+    "lint:prod": "eslint --format stylish ./ src/",
     "test": "npm run test:node && npm run test:browser",
     "test:node": "mocha ./tst/*test.js",
     "test:browser": "karma run",
     "karma": "karma start",
     "webpack:dev": "webpack-dev-server --mode development --open --hot"
+    "lint:dev": "eslint --format codeframe --fix ./ src/",
   },
   "dependencies": {
     "react": "^16.8.6",
