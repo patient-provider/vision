@@ -29,5 +29,11 @@
 2. Click 'New pull request' on <feature-branch-name>
 3. Fill in form with title and comments describing change
 4. Click 'Create pull request'
-5. If your PR is merged into project, you may delete feature branch `git branch -d <feature-branch-name>`
-6. If your PR needs further refinement, follow steps from 'While developing feature'
+
+## If your PR is merged into project
+1. Checkout master branch `git checkout master`
+2. Delete feature branch in forked repository `git push --delete origin <feature-branch-name>`
+3. Delete feature branch in local repository `git branch -d <feature-branch-name>`
+
+## If your PR needs further refinement
+- Follow steps from 'While developing feature'
