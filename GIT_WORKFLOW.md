@@ -10,8 +10,8 @@
 1. Checkout feature branch `git checkout <feature-branch-name>`
 2. To see changed/added/deleted files `git status`
 3. To discard changes to a file `git checkout -- <file>`
-4. To add a file to commit `git add <file>` or all files `git add .`
-5. To remove a file from commit `git reset HEAD <file>`
+4. To stage a file for commit `git add <file>` or all files `git add .`
+5. To remove a file staged for commit `git reset HEAD <file>`
 
 ## When you have a set of changes in commit exactly the way you want them:
 - Commit the changes `git commit -m "<description-of-changes>"`
