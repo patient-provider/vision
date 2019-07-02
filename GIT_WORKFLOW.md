@@ -13,7 +13,7 @@
 4. To stage a file for commit `git add <file>` or all files `git add .`
 5. To remove a file staged for commit `git reset HEAD <file>`
 
-## When you have a set of changes in commit exactly the way you want them:
+## When you have a set of changes staged for commit exactly the way you want them:
 - Commit the changes `git commit -m "<description-of-changes>"`
 
 ## When done with development push changes to your forked repository on GitHub
