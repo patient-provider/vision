@@ -37,5 +37,6 @@
 4. Delete feature branch in forked repository `git push --delete origin <feature-branch-name>`
 5. Delete feature branch in local repository `git branch -d <feature-branch-name>`
 
+
 ## If your PR needs further refinement
 - Follow steps from 'While developing feature'
