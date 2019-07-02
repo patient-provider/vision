@@ -32,8 +32,9 @@
 
 ## If your PR is merged into project
 1. Checkout master branch `git checkout master`
-2. Delete feature branch in forked repository `git push --delete origin <feature-branch-name>`
-3. Delete feature branch in local repository `git branch -d <feature-branch-name>`
+2. Update upstream master branch in your local repository with most recent changes git pull upstream master
+3. Delete feature branch in forked repository `git push --delete origin <feature-branch-name>`
+4. Delete feature branch in local repository `git branch -d <feature-branch-name>`
 
 ## If your PR needs further refinement
 - Follow steps from 'While developing feature'
