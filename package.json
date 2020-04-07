@@ -28,7 +28,7 @@
     "semver": "^6.1.2",
     "shelljs": "^0.8.3",
     "style-loader": "^0.23.1",
-    "webpack": "^4.35.0",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2"
   },
