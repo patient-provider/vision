@@ -27,6 +27,7 @@
     "mocha": "^6.1.4",
     "prettier": "^1.18.2",
     "semver": "^6.1.2",
+    "set-value": "^3.0.2",
     "shelljs": "^0.8.3",
     "style-loader": "^0.23.1",
     "webpack": "^4.42.1",
