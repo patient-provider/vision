@@ -37,7 +37,7 @@ jobs:
 
       # run tests!
       - run: npm run version
-      - run: npm run lint:prod
+#      - run: npm run lint:prod
       - run: npm run test
 
 workflows:
