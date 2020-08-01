@@ -19,25 +19,24 @@ jobs:
     steps:
       - checkout
 
-#      # Download and cache dependencies
-#      - restore_cache:
-#          keys:
-#            - v1-dependencies-{{ checksum "package.json" }}
-#            # fallback to using the latest cache if no exact match is found
-#            - v1-dependencies-
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
 
-#      - run: npm install
+      - run: npm install
 
-#      - save_cache:
-#          paths:
-#            - node_modules
-#          key: v1-dependencies-{{ checksum "package.json" }}
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: nohup bash -c "./node_modules/karma/bin/karma start --browsers Chrome &"
 
       # run tests!
       - run: npm run version
-#      - run: npm list --depth 0
       - run: npm run lint:prod
       - run: npm run test
 
