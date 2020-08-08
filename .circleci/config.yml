@@ -36,9 +36,7 @@ jobs:
       - run: nohup bash -c "./node_modules/karma/bin/karma start --browsers Chrome &"
 
       # run tests!
-      - run: npm run version
-      - run: npm run lint:prod
-      - run: npm run test
+      - run: npm run build
 
 workflows:
   version: 2
